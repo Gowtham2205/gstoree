@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome, Student</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.center-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.label {
+    color: #333;
+}
+
+.logout-link {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.logout-link:hover {
+    background-color: #ff0000;
+}
+
+        /* Additional Styles */
+        .option {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        label {
+            color: #333;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .option2 input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .logout-link {
+            background-color: #f44336;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .logout-link:hover {
+            background-color: #ff0000;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select,
+        input[type="number"] {
+            padding: 8px;
+            width: 100%;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        
+        .center-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+	
+	/* ... Previous CSS styles ... */
+
+.center-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.label {
+    color: #333;
+}
+
+#btn_submit {
+    background-color: orange; /* Set the background color to orange */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#btn_submit:hover {
+    background-color: #ff6600; /* Change the background color on hover */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><b>WELCOME....</b></h1>
+
+        <!-- Option 1: Stationery Items -->
+        <div class="option">
+            <h2><b>Stationery Items</b></h2>
+            <form id="stationery-form">
+                <label for="books-ruled">
+                    <input type="checkbox" id="books-ruled" name="items[]" value="Books (Ruled)"> Books (Ruled) - Rs. 50
+                    <input type="number" id="quantity-books-ruled" name="quantity[]" value="1" min="1" max="100">
+                </label>
+                <label for="books-unruled">
+                    <input type="checkbox" id="books-unruled" name="items[]" value="Books (Unruled)"> Books (Unruled) - Rs. 50
+                    <input type="number" id="quantity-books-unruled" name="quantity[]" value="1" min="1" max="100">
+                </label>
+                <label for="pens">
+                    <input type="checkbox" id="pens" name "items[]" value="Pens"> Pens - Rs. 10
+                    <input type="number" id="quantity-pens" name="quantity[]" value="1" min="1" max="100">
+                </label>
+                <label for="records">
+                    <input type="checkbox" id="records" name="items[]" value="Records"> Records - Rs. 20
+                    <input type="number" id="quantity-records" name="quantity[]" value="1" min="1" max="100">
+                </label>
+                <label for="lab-manual">
+                    <input type="checkbox" id="lab-manual" name="items[]" value="Lab Manual"> Lab Manual - Rs. 30
+                    <input type="number" id="quantity-lab-manual" name="quantity[]" value="1" min="1" max="100">
+                </label>
+            </form>
+            <p id="total-price">Total Price: Rs. 0</p>
+        </div>
+
+   
+        <div class="option">
+            <h2><b>Engineering Notes</b></h2>
+            <label for="semester-select">Select Semester:</label>
+            <select id="semester-select">
+                <option value="">Select Semester</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+                <option value="7">Semester 7</option>
+                <option value="8">Semester 8</option>
+            </select>
+
+            <div id="subjects-list>
+                <h3><b>Select Subjects:</b></h3>
+                <form id="subjects-form">
+                    <!-- Subjects will be added dynamically based on the selected semester -->
+                </form>
+            </div>
+        </div>
+
+        <div class="option">
+            <h2><b>Print Documents</b></h2>
+            <p>Upload the document you want to print:</p>
+            <form action="print.php" method="POST" enctype="multipart/form-data" class="option2">
+                <input type="file" name="document" accept=".pdf, .doc, .docx">
+                <input type="submit" value="Upload and Print">
+            </form>
+        </div>
+
+        <!-- Logout Option -->
+        <a href="logout.php" class="logout-link">Logout</a>
+    </div>
+    <div class="center-form">
+        <label style="font-size: 40px;">Name</label><br>
+        <input style="width: 800px; font-size: 40px; height: 80px; padding: 5px;" type="text" id="txt_name"><br><br>
+        <label style="font-size: 40px;">Mobile Number</label><br>
+        <input style="width: 800px; font-size: 40px; height: 80px; padding: 5px;" type="text" id="txt_mobile"><br><br>
+        <button style="width: 800px; font-size: 40px; height: 80px; padding: 5px;" type="button" onclick="orderNow();" id="btn_submit">Order Now</button><br><br>
+    </div>
+
+    <script>
+        // JavaScript to calculate and display the total price
+        const stationeryForm = document.getElementById("stationery-form");
+        const totalPriceDisplay = document.getElementById("total-price");
+
+        stationeryForm.addEventListener("change", updateTotalPrice);
+
+        function updateTotalPrice() {
+            const selectedItems = Array.from(stationeryForm.querySelectorAll('input[type="checkbox"]:checked'));
+            let totalQuantity = 0;
+
+            selectedItems.forEach((item) => {
+                const quantityInput = document.getElementById(`quantity-${item.id}`);
+                const price = parseFloat(item.value.split(" - Rs. ")[1]);
+                totalQuantity += parseInt(quantityInput.value) * price;
+            });
+
+            totalPriceDisplay.textContent = "Total Price: Rs. " + totalQuantity.toFixed(2);
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function orderNow() {
+            var name = document.getElementById("txt_name").value;
+            var mobile = document.getElementById("txt_mobile").value;
+            if (name.length == 0) {
+                alert("Enter Name");
+                return;
+            }
+            if (mobile.length == 0) {
+                alert("Enter Mobile Number");
+                return;
+            }
+            if (mobile.length != 10) {
+                alert("Enter Valid 10 Digits Mobile Number");
+                return;
+            }
+            var customer_msg = "Dear *" + name + " *Your order has been placed, THANKYOU";
+            document.getElementById("btn_submit").disabled = true;
+            window.location.href = "https://dealsms.in/api/send?number=91" + mobile + "&type=text&message=" + customer_msg + "&instance_id=651FF187D4615&access_token=651ef1dbbfeef";
+            var admin_msg = "Dear GOWTHAM, new order received </br>Customer: " + name + "*</br>Mobile: " + mobile + "";
+            window.location.href = "https://dealsms.in/api/send?number=919663642995&type=text&message=" + admin_msg + "&instance_id=651FF187D4615&access_token=651ef1dbbfeef";
+            var customer_msg = "Dear *" + name + " *Your order has been placed, THANKYOU";
+        }
+    </script>
+</body>
+</html>
